@@ -71,6 +71,8 @@ Resources:
     Type: AWS::IAM::Role
     Properties:
       RoleName: Pipeline_role
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess # Access to bucket with artifacts
       Policies:
         -
           PolicyName: Pipeline_policy
